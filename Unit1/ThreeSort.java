@@ -1,7 +1,7 @@
 /**
  * Write a program that takes three integer command-line arguments 
  * and prints them in ascending order. Use Math.min() and Math.max().
- * @author Kaan Kanadasi
+ * @author Kaan Kanadasi - GPT
  * @since 20 nov 2023
  */
 
