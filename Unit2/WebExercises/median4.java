@@ -4,7 +4,7 @@
  * @since 21 nov 2023
  */
 import java.util.Arrays;
-public class median3 {
+public class Median3 {
     public static void main(String[] args) {
     int[] intArray = new int[5];
 
