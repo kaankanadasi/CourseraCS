@@ -6,7 +6,7 @@
  * @since 21 nov 2023
  */
 
- public class binary37 {
+ public class Binary37 {
     public static void main(String[] args) {
         int input = Integer.parseInt(args[0]);
         String binary = "";
