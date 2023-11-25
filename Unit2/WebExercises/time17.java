@@ -1,4 +1,4 @@
-public class time17 {
+public class Time17 {
     public static void main(String[] args) {
         for(int hour = 0; hour < 24; hour++) {
             if (hour == 0) {
