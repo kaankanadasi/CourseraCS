@@ -6,29 +6,24 @@
  * @since 21 nov 2023
  */
 
-
 public class Kary {
     public static String ConvertToBase(long num, int base) {
         if (base < 2 || base > 16) {
             System.out.println("Base out of range (2-16)");
         }
-
         String result = "";
         while (num > 0) {
             long remainder = num % base;
             result += remainder;
             num /= base;
         }
-
         return result;
     }
-
 
     public static void main(String[] args) {
         long i = Long.parseLong(args[0]);
         int k = Integer.parseInt(args[1]);
         
-
         ConvertToBase finalResult = new ConvertToBase(i, k);
         System.out.println("Number " + i + " in base " + k + ": " + finalResult);
     }
