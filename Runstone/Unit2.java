@@ -1,4 +1,3 @@
-
 class SomeClass {
     int someVar;
 }
