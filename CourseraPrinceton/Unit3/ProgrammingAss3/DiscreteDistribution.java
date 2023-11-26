@@ -3,7 +3,9 @@
 ~/Desktop/arrays> java DiscreteDistribution 25 10 10 10 10 10 50
 3 6 6 1 6 6 2 4 6 6 3 6 6 6 6 4 5 6 2 2 6 6 2 6 2
 ~/Desktop/arrays> java DiscreteDistribution 25 80 20
-1 2 1 2 1 1 2 1 1 1 1 1 1 1 1 2 2 2 1 1 1 1 1 1 1  */
+1 2 1 2 1 1 2 1 1 1 1 1 1 1 1 2 2 2 1 1 1 1 1 1 1  
+Tamamı ChatGPT
+*/
  public class DiscreteDistribution {
     public static void main(String[] args) {
         int m = Integer.parseInt(args[0]); // Number of samples
