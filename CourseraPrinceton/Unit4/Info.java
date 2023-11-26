@@ -41,3 +41,60 @@ Advantages over command-line input
     • Can provide new arguments while the program is executing.
     • No limit on the amount of data we can input to a program
 */
+
+/*
+boolean isEmpty() - true iff no more values
+int readInt() - read a value of type int
+double readDouble() - read a value of type double
+long readLong() - read a value of type long
+boolean readBoolean() - read a value of type boolean
+char readChar() - read a value of type char
+String readString() - read a value of type String
+String readAll() - read the rest of the text
+*/
+
+public class AddTwo {
+ public static void main(String[] args) {
+    StdOut.print("Type the first integer: ");
+    int x = StdIn.readInt();
+    StdOut.print("Type the second integer: ");
+    int y = StdIn.readInt();
+    int sum = x + y;
+    StdOut.println("Their sum is " + sum);
+ }
+}
+/* % java AddTwo
+Type the first integer:
+Type the second integer:
+Their sum is 3 */
+
+
+public class Average {
+ public static void main(String[] args) {
+ double sum = 0.0; // cumulative total
+ int n = 0; // number of values
+ while (!StdIn.isEmpty()) {
+    double x = StdIn.readDouble();
+    sum = sum + x;
+    n++;
+ }
+ StdOut.println(sum / n);
+ }
+}
+/*
+• No limit on the size of the input stream.
+• Input and output can be interleaved.
+% java Average
+10.0 5.0 6.0
+3.0 7.0 32.0
+<Ctrl-d>
+10.5
+*/
+
+/*
+Piping. Connect standard output of one program to standard input of another.
+% java RandomSeq 1000000 | java Average
+0.4997970473016028
+% java RandomSeq 1000000 | java Average
+0.5002071875644842
+*/
