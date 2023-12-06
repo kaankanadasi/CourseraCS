@@ -22,6 +22,12 @@ array[index] = value; - list.set(index,value);
 - E set(int index, E obj) : Replaces the element at position index with obj; returns the element formerly at position index
 */
 
+/*
+ * Changing the size of an ArrayList while traversing it using an enhanced for loop can result in a 
+ * ConcurrentModificationException being thrown. Therefore, when using an enhanced for loop to traverse an ArrayList, 
+ * you should not add or remove elements.
+ */
+
 
 
 import java.util.ArrayList;
@@ -104,3 +110,24 @@ public class ToDoList {
         System.out.println("Here's the next thing to do: " + toDoList.get(0));
     }
 }
+
+
+
+// [0, 0, 4, 2, 5, 0, 3, 0]
+ArrayList<Integer> list1 = new ArrayList<Integer>();
+private ArrayList<Integer> nums;
+// precondition: nums.size() > 0;
+// nums contains Integer objects
+public void numQuest() {
+   int k = 0;
+   Integer zero = new Integer(0);
+   while (k < nums.size()) {
+      if (nums.get(k).equals(zero))
+         nums.remove(k);
+      k++;
+   }
+}
+/*
+ *  [0, 4, 2, 5, 3]
+ *  Incrementing the index each time through the loop will miss when there are two zeros in a row
+ */
