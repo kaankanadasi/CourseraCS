@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Main {
     public static void main(String[] args) {
         System.out.println("Vehicle Class");
@@ -13,11 +15,24 @@ class Main {
         System.out.println(s);
   
         // Sports car class doesn't have getMaxPassengers(), but Vehicle does
-        // and since SportsCar extends Car which extends Vehicle the following 
-        // call works
+        // and since SportsCar extends Car which extends Vehicle the following call works
         int passengers = s.getMaxPassengers();
-  
         System.out.println("\nThis is the maxmimum passengers of the sports car: " + passengers);
+
+
+		Vehicle a = new Car("Chevy", "Impala", 4);
+		Vehicle a2 = new SportsCar(210, "Ferrari", "Berlinetta", 2);
+
+		ArrayList<Vehicle> aList = new ArrayList<Vehicle>();
+		aList.add(new Vehicle()); // Super
+		aList.add(a); // Sub
+		aList.add(a2); // Sub-Sub
+		
+		// Becasue toString is defined in Vehicle we can call it from any class that extends Vehicle, however because
+		// Car and Sports car Override the method, we get different behaviors. Pay close attention to differences in the output.
+		for (Vehicle vehicle : aList){
+			System.out.println("\n----\n" + vehicle);
+		}
     }
 }
 
@@ -60,6 +75,7 @@ public class SportsCar extends Car {
         return topSpeed;
     }
     public String toString() {
+        // toString() method of the superclass
         return super.toString() + "\n" + "Top Speed: " + getTopSpeed();
     }
 }
@@ -69,7 +85,7 @@ public class Vehicle {
     private int maxPassengers;
   
     public Vehicle() {
-        this(0);
+        this(0); // initializes maxPassengers to 0
     }
     public Vehicle (int maxPassengers) {
         this.maxPassengers = maxPassengers;
