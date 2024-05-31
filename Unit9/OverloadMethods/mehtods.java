@@ -6,7 +6,7 @@ class Plant {
         System.out.println("The " + plantName + " has been watered");
     }
     
-    public Plant(String name, int height){
+    public Plant(String name, int height) {
         // We explicitly call the Object constructor even through we did not use the extends keyword
         super(); // Plant is a subclass of Object
         plantName = name;
@@ -15,8 +15,8 @@ class Plant {
     }
 }
   
-class Succulent extends Plant{
-    public Succulent(String succulentName, int succulentHeight){
+class Succulent extends Plant {
+    public Succulent(String succulentName, int succulentHeight) {
         super(succulentName, succulentHeight); // ??? super(name, height) olması lazım değil mi
         System.out.println("Succulent constructor has been called");
     }
